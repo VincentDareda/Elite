@@ -1,0 +1,444 @@
+:root {
+  --primary: #b6895b;
+  --bg: #0c0101;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffffff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active{
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.15);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
+  .slider {
+    flex-wrap: wrap;
+  }
+
+  .slider .slide {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .slider .slide h1 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .menu p {
+    font-size: 1.2rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .modal-content{
+    flex-wrap: wrap;
+  }
+}
+
+ 
+  /* Aturan CSS untuk viewport dengan lebar maksimum 480px */
+  /* Misalnya, mengubah tata letak elemen atau ukuran font */
+  @media (max-width: 480px) {
+    html {
+      font-size: 55%;
+    }
+}
+
+
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #513c28;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+
+.about .row {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.about .row .name-card {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid #666;
+
+}
+
+.about .row .name-card img {
+  
+  width: 80%;
+}
+
+
+.about .row .name-card-title {
+  margin-top: 1.5rem auto 0.5rem;
+}
+
+
+
+.about .orang-img {
+  padding: 1rem 0;
+}
+
+.about .orang-img img {
+  height: 25rem;
+}
+
+
+
+
+    footer {
+      background-color: var(--primary);
+      margin-top: 3rem;
+      text-align: center;
+      padding: 1rem 0 2rem;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    
+     footer .links a:hover {
+      color: var(--bg);
+    }
+    
+    footer .links {
+      margin-bottom: 1.4rem;
+    }
+    
+    footer .links a {
+      color: #fff;
+      padding: 0.7rem 1rem;
+    }
+    
+    footer .credit {
+      font-size: 1rem;
+    }
+    
+    footer .credit a{
+      color:#fff;
+      transition: 0.8s;
+      font-weight: 700;
+    }
+
+    footer .credit a:hover{
+      color: var(--bg);
+    }
+    
+    footer .member {
+      margin: 1rem 1rem 5px 1rem;
+    
+    }
+    
+    footer .member a{
+      margin-top: 3px;
+      margin-bottom: 2px;
+      font-size: 1.3rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      transition: color 0.7s;
+      font-weight: 700;
+    }
+    
+    footer .member a:hover{
+      color: var(--bg)
+    }
+    
+    footer .member a {
+      color: white;
+    }
+
+    /* slider */
+
+.slider {
+  position: relative;
+  display: flex;
+  width: 400px;
+  height: 480px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 70vh;
+}
+
+.slider .slider-items .slider-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: .6s;
+}
+
+.slider .slider-controls span {
+  cursor: pointer;
+  position: absolute;
+  top: 42%;
+  width: 34px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 32px;
+  color: #303030;
+  background: #ffffffaf;
+  transition: .3s ease;
+}
+
+.slider .slider-controls span:hover {
+  color: #000;
+  background: #fff;
+}
+
+.slider .slider-controls .prev {
+  left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.slider .slider-controls .next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.slider .slider-indicators {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 15px;
+}
+
+.slider .slider-indicators span {
+  cursor: pointer;
+  margin: 0 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  transition: .2s;
+}
+
+.slider .slider-content {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  justify-content: center;
+}
+
+.slider .slider-content h3 {
+  position: absolute;
+  bottom: 36px;
+  color: #fff;
+  font-size: 26px;
+  font-family: 'Kanit';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: .4s;
+  text-align: center;
+}
+
+
+
+    /* media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+}
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffffff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active{
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.15);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .menu p {
+    font-size: 1.2rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .modal-content{
+    flex-wrap: wrap;
+  }
+
+}
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
